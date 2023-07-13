@@ -1,0 +1,10 @@
+kind: Service			#    --> Defines to create service type object
+apiVersion: v1
+metadata:
+  name: mysql-service
+spec:
+  ports:
+    - port: 3306			#    --> Containers port exposed
+  selector:
+    application: wordpress		#--> Apply this service to any pods which has the specific label
+  clusterIP: None		 #  --> Specifies the service type i.e. ClusterIP or NodePort
