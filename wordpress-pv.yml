@@ -1,13 +1,16 @@
 apiVersion: v1
-kind: PersistentVolumeClaim
+kind: PersistentVolume
 metadata:
-        name: wp-pv-claim
-        labels:
-                application: wordpress
-                mode: wordpress-app
+  name: wp-pv
+  labels:
+    application: wordpress
+    mode: wordpress-app
 spec:
-        accessModes:
-                - ReadWriteOnce
-        resources:
-                requests:
-                        storage: 4Gi
+  capacity:
+    storage: 2Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: ""
+  hostPath:
+    path: /tmp

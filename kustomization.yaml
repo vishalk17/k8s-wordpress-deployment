@@ -3,9 +3,11 @@ secretGenerator:
   literals:
   - password=Vishal@1995
 resources:
-  - mysql-pv.yml
-  - wordpress-pv.yml
-  - mysql-service.yml
-  - wordpress-service.yml
-  - deploymysql.yml
-  - deploy-wordpress.yml
+         - mysql-pv.yml
+         - wordpress-pv.yml
+         - mysql-pvc.yml
+         - wordpress-pvc.yml
+         - mysql-service.yml
+         - wordpress-service.yml
+         - deploymysql.yml
+         - deploy-wordpress.yml
