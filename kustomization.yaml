@@ -3,6 +3,7 @@ secretGenerator:
   literals:
   - password=Vishal@1995
 resources:
+         - wordpress-ingress.yml
          - mysql-pv.yml
          - wordpress-pv.yml
          - mysql-pvc.yml
